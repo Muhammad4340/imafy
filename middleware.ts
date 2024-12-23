@@ -16,5 +16,17 @@ export default authMiddleware({
 });
 
 export const config = {
-  matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
+  ignoredRoutes: [
+    "/((?!.+\\.[\\w]+$|_next).*)", 
+    "/",                          
+    "/(api|trpc)(.*)",            
+    "/transformations/add/recolor",
+    "/transformations/add/remove",
+    "/transformations/add/fill",
+    "/transformations/add/restore",
+    "/transformations/add/removeBackground",
+    "/profile",
+    "/credits",
+  ],
 };
+
