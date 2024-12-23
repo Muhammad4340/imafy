@@ -1,5 +1,3 @@
-import { authMiddleware } from "@clerk/nextjs";
-
 export default authMiddleware({
   publicRoutes: [
     "/",
@@ -13,8 +11,12 @@ export default authMiddleware({
     "/profile",
     "/credits",
   ],
-  debug: true, // Tambahkan ini untuk debugging
+  debug: true,
+  beforeAuth: async (req, evt) => {
+    console.log("Cookies in request:", req.headers.get("cookie"));
+  },
 });
+
 
 export const config = {
   matcher: ["/", "/((?!.+\\.[\\w]+$|_next).*)", "/(api|trpc)(.*)"],
