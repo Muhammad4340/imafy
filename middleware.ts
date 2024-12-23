@@ -5,7 +5,7 @@ export default authMiddleware({
 });
 
 export const config = {
-  ignoredRoutes: [
+  matcher: [
     "/((?!.+\\.[\\w]+$|_next).*)", 
     "/",                          
     "/(api|trpc)(.*)",            
