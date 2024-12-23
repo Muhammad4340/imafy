@@ -15,3 +15,7 @@ export default authMiddleware({
   ],
   debug: true, // Tambahkan ini untuk debugging
 });
+
+export const config = {
+  matcher: ["/((?!.+\\.[\\w]+$|_next).*)","/","/(api|trpc)(.*)"],
+};
