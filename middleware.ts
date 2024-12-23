@@ -13,6 +13,7 @@ export default authMiddleware({
     "/profile",
     "/credits",
   ],
+  debug: true, // Tambahkan ini untuk debugging
 });
 
 export const config = {
