@@ -1,6 +1,6 @@
-import { WithClerkMiddleware } from '@clerk/nextjs/server';
+import { authMiddleware } from '@clerk/nextjs';
 
-export default WithClerkMiddleware({
+export default authMiddleware({
   publicRoutes: [
     "/",
     "/api/webhooks/clerk",
